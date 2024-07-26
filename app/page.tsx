@@ -13,6 +13,7 @@ const links = [
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 500);
@@ -21,43 +22,75 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex justify-between items-center w-full h-[90px] bg-slate-200">
-        <div>
-          <Link href="/" className="flex flex-row w-32 ">
-            <h1 className="text-4xl font-semibold pt-8 text-[#f5b041] pb-4">
+      <div className="flex justify-between items-center w-full h-[90px] bg-slate-200 px-4">
+        <div className="flex items-center">
+          <Link href="/" className="flex flex-row items-center">
+            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041]">
               KILLO
             </h1>
-            <Image src="/img/im.png" alt="h" width={70} height={70} />
+            <Image
+              src="/img/im.png"
+              alt="h"
+              width={50}
+              height={50}
+              className="ml-2"
+            />
           </Link>
         </div>
-        {links.map((link) => (
-          <ul key={link.name}>
-            <li>
-              <Link href={link.href}>{link.name}</Link>
-            </li>
+        <div className="hidden sm:flex items-center space-x-4">
+          <ul className="flex space-x-4">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link href={link.href} className="text-sm sm:text-base">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
-        ))}
-
-        <div>
-          <Link href="/">
-            <Image src="" alt="" />
-          </Link>
-
-          <Link href="/">
-            <Image src="" alt="" />
-          </Link>
-
-          <Link href="/">
-            <Image src="" alt="" />
-          </Link>
+          <div>
+            <Link href="https://x.com/Killosol">
+              <Image src="/img/x.png" alt="x" width={25} height={25} />
+            </Link>
+          </div>
+          <div>
+            <Link href="https://t.me/KILLOOFFICIAL">
+              <Image src="/img/t.png" alt="Telegram" width={30} height={30} />
+            </Link>
+          </div>
+        </div>
+        <div className="sm:hidden flex items-center">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            <Image src="/img/menu.png" alt="Menu" width={25} height={25} />
+          </button>
         </div>
       </div>
+      {menuOpen && (
+        <div className="sm:hidden bg-slate-200 w-full flex flex-col items-center space-y-4 p-4">
+          <ul className="space-y-4">
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link href={link.href} className="text-sm sm:text-base">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex space-x-4">
+            <Link href="https://x.com/Killosol">
+              <Image src="/img/x.png" alt="x" width={25} height={25} />
+            </Link>
+            <Link href="https://t.me/KILLOOFFICIAL">
+              <Image src="/img/t.png" alt="Telegram" width={30} height={30} />
+            </Link>
+          </div>
+        </div>
+      )}
 
-      <div className="bg-[#a8cec6] w-full h-[750px] flex flex-col items-center  ">
-        <h1 className="text-5xl font-semibold pt-8 text-[#f5b041] pb-4">
+      <div className="bg-[#a8cec6] h-auto sm:h-[932px] w-full flex flex-col items-center py-8">
+        <h1 className="text-3xl sm:text-5xl font-semibold text-[#f5b041] pb-4">
           KILLO
         </h1>
-        <p className="text-white text-xl pb-16">
+        <p className="text-white text-lg sm:text-xl pb-8 text-center px-4">
           The Grim reaper of Zeroes Reap Rewards by slaying Zeroes
         </p>
         <div
@@ -72,46 +105,65 @@ export default function Home() {
             alt="KILLO the Grim Reaper"
             width={500}
             height={500}
+            className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mx-auto"
           />
         </div>
       </div>
 
-      <div>
-        <p className="flex justify-center  items-center font-normal hover:font-bold text-xl bg-[#f5b041] h-32">
+      <div className="bg-[#f5b041] py-8 text-center px-4">
+        <p className="font-normal hover:font-bold text-lg sm:text-xl">
           Contract Renounced | No Taxes | Total Supply 69 Billion | Crowdfunded
           Launch | All Tokens in Circulation
         </p>
       </div>
-      <div className="flex w-full h-[800px] bg-slate-200 pt-8 ">
-        <div className=" w-1/2 h-[900px] ">
+
+      <div className="flex flex-col sm:flex-row w-full bg-slate-200 py-8">
+        <div className="sm:w-1/2 flex justify-center">
           <KillonomicsPieChart />
         </div>
-        <h1 className="flex flex-col justify-center items-center w-1/2 animate-text bg-gradient-to-r from-amber-700 via-brown-500 to-yellow-900 bg-clip-text text-transparent text-3xl font-black">
-          <p>
+        <div className="sm:w-1/2 flex flex-col justify-center items-center text-center px-4 mt-8 sm:mt-0">
+          <p className="bg-gradient-to-r from-amber-700 via-brown-500 to-yellow-900 bg-clip-text text-transparent text-xl sm:text-3xl font-black">
             Legend tells of an ancient prophecy. When the markets crash,
-            <span className="text-semi-bold text-slate-700">
+            <span className="font-semibold text-slate-700">
               when bulls turn to bears, and FOMO fades to FUD,
-            </span>{" "}
-            a spectral figure emerges from the shadows.the Grim Reaper arises
+            </span>
+            a spectral figure emerges from the shadows. The Grim Reaper arises
             with his scythe.
           </p>
-          <p className="text-semi-bold text-slate-700">
-            With Every swings cutting away FUDs and Zeroes maintaining the
+          <p className="font-semibold text-slate-700 mt-4 text-xl sm:text-3xl">
+            With Every swing cutting away FUDs and Zeroes maintaining the
             balance.
           </p>
-        </h1>
+        </div>
       </div>
-      <div className="w-full h-[1200px] bg-slate-200">
+
+      <div className="w-full bg-slate-200 py-8">
         <KILLOInfo />
       </div>
-      <div className="bg-slate-800 text-white w-full h-64">
-        <div>
-          <Link href="/" className="flex flex-row w-32 ">
-            <h1 className="text-4xl font-semibold pt-8 text-[#f5b041] pb-4">
+
+      <div className="bg-slate-800 text-white w-full py-8">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0">
+          <Link href="/" className="flex flex-row items-center">
+            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041]">
               KILLO
             </h1>
-            <Image src="/img/im.png" alt="h" width={70} height={70} />
+            <Image
+              src="/img/im.png"
+              alt="h"
+              width={50}
+              height={50}
+              className="ml-2"
+            />
           </Link>
+          <div className="text-center sm:text-left sm:ml-8 mx-2 ">
+            <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
+            <p className="text-sm sm:text-base mt-2">
+              $KILLO is a fan made speculative digital asset with no intrinsic
+              value. The price can fluctuate wildly and might go down. Do not
+              invest money you cannot afford to lose. We are not responsible for
+              any financial loss.
+            </p>
+          </div>
         </div>
       </div>
     </div>

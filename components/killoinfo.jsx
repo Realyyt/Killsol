@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const SlideBox = ({ title, content }) => {
@@ -60,7 +61,7 @@ const KILLOInfo = () => {
   ];
 
   return (
-    <div className="w-full h-[1000px] flex justify-center items-center bg-slate-200">
+    <div className="w-full  flex justify-center items-center bg-slate-200">
       <div className=" w-1/2 mx-auto p-6  rounded-lg shadow-md text-[#ca6f1e]">
         <h2 className="text-3xl font-bold mb-6 text-center text-[#6fa196]">
           How to buy:
@@ -81,7 +82,11 @@ const KILLOInfo = () => {
           Community:
         </h3>
         <p className="mb-6 text-center text-[#ca6f1e]">
-          Join our gang of zero-haters. <span className="font-bold">X, TG</span>
+          Join our gang of zero-haters.{" "}
+          <span className="font-bold">
+            <Link href="https://x.com/Killosol">X</Link>,
+            <Link href="https://t.me/KILLOOFFICIAL">TG</Link>
+          </span>
         </p>
         <h3 className="text-2xl font-bold mb-4 text-center text-[#6fa196]">
           FAQs:
