@@ -112,7 +112,7 @@ export default function Home() {
 
       <div className="bg-[#f5b041] py-8 text-center px-4">
         <p className="font-normal hover:font-bold text-lg sm:text-xl">
-          Contract Renounced | No Taxes | Total Supply 69 Billion | Crowdfunded
+          Contract Renounced | No Taxes | Total Supply 144 Billion | Crowdfunded
           Launch | All Tokens in Circulation
         </p>
       </div>
