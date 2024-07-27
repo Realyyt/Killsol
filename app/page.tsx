@@ -7,9 +7,8 @@ import KillonomicsPieChart from "@/components/piechart";
 import KILLOInfo from "@/components/killoinfo";
 
 const links = [
-  { name: "Home", href: "#" },
   { name: "About", href: "#About" },
-  { name: "Tokenomics", href: "#Tokenomics" },
+  { name: "Killonomics", href: "#Tokenomics" },
   { name: "How to Buy", href: "#hc" },
   { name: "FAQ", href: "#hc" },
   { name: "Community", href: "#c" },
@@ -34,7 +33,7 @@ export default function Home() {
           }
         `}
       </style>
-      <div className="flex justify-between items-center w-full h-[90px] bg-slate-200 px-4">
+      <div className="flex justify-between items-center w-full h-[90px] bg-slate-200 px-4 oi-font">
         <div className="flex items-center">
           <Link href="/" className="flex flex-row items-center">
             <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041]">
@@ -99,11 +98,8 @@ export default function Home() {
       )}
 
       <div className="bg-[#a8cec6] h-auto sm:h-[732px] w-full flex flex-col items-center py-8">
-        <h1 className="text-3xl sm:text-5xl font-semibold text-[#f5b041] pb-4">
-          KILLO
-        </h1>
-        <p className="text-white text-lg sm:text-xl pb-8 text-center px-4">
-          The Grim reaper of Zeroes Reap Rewards by slaying Zeroes
+        <p className="text-white text-lg sm:text-xl pb-8 text-center px-4 oi-font">
+          The Grim reaper of Zeroes
         </p>
         <div
           className={`transition-all duration-1000 ease-in-out transform ${
@@ -123,9 +119,10 @@ export default function Home() {
       </div>
 
       <div className="bg-[#f5b041] py-8 text-center px-4" id="About">
-        <p className="font-normal hover:font-bold text-lg sm:text-xl">
-          Contract Renounced | No Taxes | Total Supply 69 Billion | Crowdfunded
-          Launch | All Tokens in Circulation
+        <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font">
+          {" "}
+          No Taxes | Total Supply 144 Billion | Crowdfunded Launch | All Tokens
+          in Circulation
         </p>
       </div>
 
@@ -133,9 +130,6 @@ export default function Home() {
         className="flex flex-col sm:flex-row w-full bg-slate-200 py-8"
         id="Tokenomics"
       >
-        <div className="sm:w-1/2 flex justify-center">
-          <KillonomicsPieChart />
-        </div>
         <div className="sm:w-1/2 flex flex-col justify-center items-center text-center px-4 mt-8 sm:mt-0">
           <p className="bg-gradient-to-r from-amber-700 via-brown-500 to-yellow-900 bg-clip-text text-transparent text-xl sm:text-3xl font-black">
             Legend tells of an ancient prophecy. When the markets crash,
@@ -150,6 +144,10 @@ export default function Home() {
             balance.
           </p>
         </div>
+
+        <div className="sm:w-1/2 flex justify-center">
+          <KillonomicsPieChart />
+        </div>
       </div>
 
       <div className="w-full bg-slate-200 py-8" id="hc">
@@ -159,7 +157,7 @@ export default function Home() {
       <div className="bg-slate-800 text-white w-full py-8">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0">
           <Link href="/" className="flex flex-row items-center">
-            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041]">
+            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041] oi-font">
               KILLO
             </h1>
             <Image
@@ -174,9 +172,9 @@ export default function Home() {
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
               $KILLO is a fan made speculative digital asset with no intrinsic
-              value. The price can fluctuate wildly and might go down. Do not
-              invest money you cannot afford to lose. We are not responsible for
-              any financial loss.
+              value. The price may go up may go down. Do not invest money you
+              cannot afford to lose. We are not responsible for any financial
+              loss.
             </p>
           </div>
         </div>

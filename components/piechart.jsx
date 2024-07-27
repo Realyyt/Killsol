@@ -15,8 +15,16 @@ const KillonomicsPieChart = () => {
 
   return (
     <div className="w-full max-w-md mx-auto p-4">
-      <h2 className="text-2xl font-bold text-center mb-4">
-        Killonomics 
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Oi&display=swap');
+          .oi-font {
+            font-family: "Kavoon", cursive;
+          }
+        `}
+      </style>
+      <h2 className="text-2xl font-bold text-center mb-4 oi-font">
+        Killonomics
       </h2>
       <svg viewBox="0 0 100 100" className="w-full h-auto">
         {data.map((item, index) => {
