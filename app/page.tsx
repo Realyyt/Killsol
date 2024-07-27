@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="bg-[#a8cec6] h-auto sm:h-[932px] w-full flex flex-col items-center py-8">
+      <div className="bg-[#a8cec6] h-auto sm:h-[732px] w-full flex flex-col items-center py-8">
         <h1 className="text-3xl sm:text-5xl font-semibold text-[#f5b041] pb-4">
           KILLO
         </h1>
@@ -105,14 +105,14 @@ export default function Home() {
             alt="KILLO the Grim Reaper"
             width={500}
             height={500}
-            className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-3/4 mx-auto"
+            className="w-full sm:w-2/3 md:w-1/2 lg:w-3/4 xl:w-2/3 mx-auto"
           />
         </div>
       </div>
 
       <div className="bg-[#f5b041] py-8 text-center px-4">
         <p className="font-normal hover:font-bold text-lg sm:text-xl">
-          Contract Renounced | No Taxes | Total Supply 144 Billion | Crowdfunded
+          Contract Renounced | No Taxes | Total Supply 69 Billion | Crowdfunded
           Launch | All Tokens in Circulation
         </p>
       </div>
@@ -155,7 +155,7 @@ export default function Home() {
               className="ml-2"
             />
           </Link>
-          <div className="text-center sm:text-left sm:ml-8 mx-2 ">
+          <div className="text-center sm:text-left sm:ml-8 mx-2 font-['Bangers'] ">
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
               $KILLO is a fan made speculative digital asset with no intrinsic

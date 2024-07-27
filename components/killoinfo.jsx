@@ -61,8 +61,8 @@ const KILLOInfo = () => {
   ];
 
   return (
-    <div className="w-full  flex justify-center items-center bg-slate-200">
-      <div className=" w-1/2 mx-auto p-6  rounded-lg shadow-md text-[#ca6f1e]">
+    <div className="w-full flex justify-center items-center bg-slate-200 px-4 py-6">
+      <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 mx-auto p-6 rounded-lg shadow-md text-[#ca6f1e] ">
         <h2 className="text-3xl font-bold mb-6 text-center text-[#6fa196]">
           How to buy:
         </h2>
