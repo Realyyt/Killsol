@@ -16,7 +16,7 @@ const KillonomicsPieChart = () => {
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <h2 className="text-2xl font-bold text-center mb-4">
-        Killonomics Distribution
+        Killonomics 
       </h2>
       <svg viewBox="0 0 100 100" className="w-full h-auto">
         {data.map((item, index) => {

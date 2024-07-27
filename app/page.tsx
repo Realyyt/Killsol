@@ -7,8 +7,12 @@ import KillonomicsPieChart from "@/components/piechart";
 import KILLOInfo from "@/components/killoinfo";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Official Links", href: "/" },
+  { name: "Home", href: "#" },
+  { name: "About", href: "#About" },
+  { name: "Tokenomics", href: "#Tokenomics" },
+  { name: "How to Buy", href: "#hc" },
+  { name: "FAQ", href: "#hc" },
+  { name: "Community", href: "#c" },
 ];
 
 export default function Home() {
@@ -22,6 +26,14 @@ export default function Home() {
 
   return (
     <div>
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Oi&display=swap');
+          .oi-font {
+            font-family: "Kavoon", cursive;
+          }
+        `}
+      </style>
       <div className="flex justify-between items-center w-full h-[90px] bg-slate-200 px-4">
         <div className="flex items-center">
           <Link href="/" className="flex flex-row items-center">
@@ -69,9 +81,9 @@ export default function Home() {
           <ul className="space-y-4">
             {links.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="text-sm sm:text-base">
+                <a href={link.href} className="text-sm sm:text-base">
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -110,14 +122,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#f5b041] py-8 text-center px-4">
+      <div className="bg-[#f5b041] py-8 text-center px-4" id="About">
         <p className="font-normal hover:font-bold text-lg sm:text-xl">
           Contract Renounced | No Taxes | Total Supply 69 Billion | Crowdfunded
           Launch | All Tokens in Circulation
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row w-full bg-slate-200 py-8">
+      <div
+        className="flex flex-col sm:flex-row w-full bg-slate-200 py-8"
+        id="Tokenomics"
+      >
         <div className="sm:w-1/2 flex justify-center">
           <KillonomicsPieChart />
         </div>
@@ -137,7 +152,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full bg-slate-200 py-8">
+      <div className="w-full bg-slate-200 py-8" id="hc">
         <KILLOInfo />
       </div>
 
@@ -155,7 +170,7 @@ export default function Home() {
               className="ml-2"
             />
           </Link>
-          <div className="text-center sm:text-left sm:ml-8 mx-2 font-['Bangers'] ">
+          <div className="text-center text-slate-700 sm:text-left sm:ml-8 mx-2 oi-font ">
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
               $KILLO is a fan made speculative digital asset with no intrinsic

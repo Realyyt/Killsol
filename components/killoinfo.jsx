@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const SlideBox = ({ title, content }) => {
@@ -79,16 +80,6 @@ const KILLOInfo = () => {
           you&#39;ve successfully summoned the Grim Reaper.
         </p>
         <h3 className="text-2xl font-bold mb-4 text-center text-[#6fa196]">
-          Community:
-        </h3>
-        <p className="mb-6 text-center text-[#ca6f1e]">
-          Join our gang of zero-haters.{" "}
-          <span className="font-bold">
-            <Link href="https://x.com/Killosol">X</Link>,
-            <Link href="https://t.me/KILLOOFFICIAL">TG</Link>
-          </span>
-        </p>
-        <h3 className="text-2xl font-bold mb-4 text-center text-[#6fa196]">
           FAQs:
         </h3>
         <p className="mb-4 italic text-center text-[#ca6f1e]">
@@ -99,6 +90,21 @@ const KILLOInfo = () => {
             <SlideBox key={index} title={faq.title} content={faq.content} />
           ))}
         </div>
+
+        <h3 className="text-2xl font-bold mb-4 text-center text-[#6fa196]">
+          Community:
+        </h3>
+        <p className="mb-6 text-center text-[#ca6f1e]" id="c">
+          Join our gang of zero-haters.
+          <span className="flex justify-center  ">
+            <Link href="https://x.com/Killosol">
+              <Image src="/img/x.png" alt="x" width={20} height={20} />
+            </Link>
+            <Link href="https://t.me/KILLOOFFICIAL" className="ml-2">
+              <Image src="/img/t.png" alt="Telegram" width={25} height={25} />
+            </Link>
+          </span>
+        </p>
       </div>
     </div>
   );
