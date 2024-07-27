@@ -71,7 +71,12 @@ export default function Home() {
         </div>
         <div className="sm:hidden flex items-center">
           <button onClick={() => setMenuOpen(!menuOpen)}>
-            <Image src="/img/menu.png" alt="Menu" width={25} height={25} />
+            <Image
+              src={menuOpen ? "/img/close.png" : "/img/menu.png"}
+              alt={menuOpen ? "Close menu" : "Menu"}
+              width={25}
+              height={25}
+            />
           </button>
         </div>
       </div>
