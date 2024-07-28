@@ -19,8 +19,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
+    setIsVisible(true);
   }, []);
 
   return (
@@ -102,15 +101,13 @@ export default function Home() {
         </div>
       )}
 
-      <div className="bg-[#a8cec6] h-auto sm:h-[732px] w-full flex flex-col items-center py-8">
+      <div className="bg-[#a8cec6] min-h-[732px] w-full flex flex-col items-center py-8">
         <p className="text-white text-lg sm:text-xl pb-8 text-center px-4 oi-font">
           The Grim reaper of Zeroes
         </p>
         <div
-          className={`transition-all duration-1000 ease-in-out transform ${
-            isVisible
-              ? "translate-x-0 opacity-100"
-              : "translate-x-full opacity-0"
+          className={`transition-opacity duration-1000 ease-in-out ${
+            isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
           <Image
