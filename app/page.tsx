@@ -118,7 +118,7 @@ export default function Home() {
             alt="KILLO the Grim Reaper"
             width={500}
             height={500}
-            className="w-full sm:w-2/3 md:w-1/2 lg:w-3/4 xl:w-2/3 mx-auto"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto"
           />
         </div>
       </div>
@@ -126,7 +126,7 @@ export default function Home() {
       <div className="bg-[#f5b041] py-8 text-center px-4" id="About">
         <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font">
           {" "}
-          No Taxes | Total Supply 144 Billion | Crowdfunded Launch 
+          No Taxes | Total Supply 144 Billion | Crowdfunded Launch
         </p>
       </div>
 
