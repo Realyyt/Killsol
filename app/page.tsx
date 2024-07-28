@@ -126,8 +126,7 @@ export default function Home() {
       <div className="bg-[#f5b041] py-8 text-center px-4" id="About">
         <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font">
           {" "}
-          No Taxes | Total Supply 144 Billion | Crowdfunded Launch | All Tokens
-          in Circulation
+          No Taxes | Total Supply 144 Billion | Crowdfunded Launch 
         </p>
       </div>
 
