@@ -11,7 +11,8 @@ const links = [
   { name: "Killonomics", href: "#Tokenomics" },
   { name: "How to Buy", href: "#hc" },
   { name: "FAQ", href: "#hc" },
-  { name: "Community", href: "#c" },
+  { name: "Community", href: "#c" }, 
+  { name: "Contact Us", href: "#cu" },
 ];
 
 export default function Home() {
@@ -156,7 +157,7 @@ export default function Home() {
       </div>
 
       <div className="bg-slate-800 text-white w-full py-8">
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0">
+        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 mx-4">
           <Link href="/" className="flex flex-row items-center">
             <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041] oi-font">
               KILLO
@@ -166,9 +167,15 @@ export default function Home() {
               alt="h"
               width={50}
               height={50}
-              className="ml-2"
+              className="ml-2  mr-4"
             />
           </Link>
+          <div
+            className="text-center text-[#d1a359] sm:text-left sm:ml-8 mx-1 oi-font "
+            id="cu"
+          >
+            <Link href="mailto:contact@killo.xyz">contact@killo.xyz</Link>
+          </div>
           <div className="text-center text-slate-700 sm:text-left sm:ml-8 mx-2 oi-font ">
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
