@@ -178,7 +178,7 @@ export default function Home() {
           >
             <Link href="mailto:contact@killo.xyz">contact@killo.xyz</Link>
           </div>
-          <div className="text-center text-[ #0A0A0A] sm:text-left sm:ml-8 mx-2 oi-font ">
+          <div className="text-center text-[#0A0A0A] sm:text-left sm:ml-8 mx-2 oi-font ">
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
               $KILLO is a fan made speculative digital asset with no intrinsic
