@@ -6,15 +6,15 @@ import React, { useState } from "react";
 const SlideBox = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="mb-4 border-2 border-[#ca6f1e] rounded-lg overflow-hidden">
+    <div className="mb-4 border-2 border-[#ff3131] rounded-lg overflow-hidden">
       <button
-        className="w-full text-left p-4 bg-[#ca6f1e] hover:opacity-90 transition-opacity duration-300 focus:outline-none"
+        className="w-full text-left p-4 bg-[#ff3131] hover:opacity-90 transition-opacity duration-300 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <p className="font-semibold text-white">{title}</p>
       </button>
       <div
-        className={`bg-slate-200 text-[#ca6f1e] transition-all duration-300 ease-in-out ${
+        className={`bg-white text-black transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-96 p-4" : "max-h-0"
         } overflow-hidden`}
       >
@@ -62,7 +62,7 @@ const KILLOInfo = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center items-center bg-slate-200 px-4 py-6">
+    <div className="w-full flex justify-center items-center bg-white px-4 py-6">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Oi&display=swap');
@@ -71,11 +71,11 @@ const KILLOInfo = () => {
           }
         `}
       </style>
-      <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 mx-auto p-6 rounded-lg shadow-md text-[#ca6f1e]  ">
-        <h2 className="text-3xl font-bold mb-6 text-center text-[#6fa196] oi-font">
+      <div className="w-full sm:w-3/4 md:w-1/2 lg:w-1/2 mx-auto p-6 rounded-lg shadow-md text-black">
+        <h2 className="text-3xl font-bold mb-6 text-center text-[#ff3131] oi-font">
           How to buy:
         </h2>
-        <p className="mb-4 text-lg text-[#ca6f1e] oi-font">
+        <p className="mb-4 text-lg text-black oi-font">
           Here is how to summon $KILLO:
         </p>
         <div className="mb-6">
@@ -83,14 +83,14 @@ const KILLOInfo = () => {
             <SlideBox key={index} title={step.title} content={step.content} />
           ))}
         </div>
-        <p className="text-lg font-bold mb-6 text-center text-[#6fa196] oi-font">
+        <p className="text-lg font-bold mb-6 text-center text-[#ff3131] oi-font">
           Finished Already? You&#39;ve Earned Your Rest! That&#39;s right,
           you&#39;ve successfully summoned the Grim Reaper.
         </p>
-        <h3 className="text-2xl font-bold mb-4 text-center text-[#6fa196]">
+        <h3 className="text-2xl font-bold mb-4 text-center text-[#ff3131]">
           FAQs:
         </h3>
-        <p className="mb-4 italic text-center text-[#ca6f1e] oi-font">
+        <p className="mb-4 italic text-center text-black oi-font">
           Got Questions, we&#39;ve got answers (and Maybe a few jokes)
         </p>
         <div>
@@ -99,12 +99,12 @@ const KILLOInfo = () => {
           ))}
         </div>
 
-        <h3 className="text-2xl font-bold  text-center text-[#6fa196] oi-font">
+        <h3 className="text-2xl font-bold text-center text-[#ff3131] oi-font">
           Community:
         </h3>
-        <p className="text-center text-[#ca6f1e] oi-font" id="c">
+        <p className="text-center text-black oi-font" id="c">
           Join our gang of zero-haters.
-          <span className="flex justify-center  ">
+          <span className="flex justify-center">
             <Link href="https://x.com/Killosol">
               <Image src="/img/x.png" alt="x" width={20} height={20} />
             </Link>

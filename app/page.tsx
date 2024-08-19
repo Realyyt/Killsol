@@ -11,7 +11,7 @@ const links = [
   { name: "Killonomics", href: "#Tokenomics" },
   { name: "How to Buy", href: "#hc" },
   { name: "FAQ", href: "#hc" },
-  { name: "Community", href: "#c" }, 
+  { name: "Community", href: "#c" },
   { name: "Contact Us", href: "#cu" },
 ];
 
@@ -33,14 +33,14 @@ export default function Home() {
           }
         `}
       </style>
-      <div className="flex justify-between items-center w-full h-[90px] bg-slate-200 px-4 oi-font">
+      <div className="flex justify-between items-center w-full h-[90px] bg-white px-4 oi-font">
         <div className="flex items-center">
           <Link href="/" className="flex flex-row items-center">
-            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041]">
+            <h1 className="text-2xl sm:text-4xl font-semibold text-[#ff3131]">
               KILLO
             </h1>
             <Image
-              src="/img/im.png"
+              src="/img/$KILLOlogo.png"
               alt="h"
               width={50}
               height={50}
@@ -52,7 +52,10 @@ export default function Home() {
           <ul className="flex space-x-4">
             {links.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="text-sm sm:text-base">
+                <Link
+                  href={link.href}
+                  className="text-sm sm:text-base text-black"
+                >
                   {link.name}
                 </Link>
               </li>
@@ -81,11 +84,11 @@ export default function Home() {
         </div>
       </div>
       {menuOpen && (
-        <div className="sm:hidden bg-slate-200 w-full flex flex-col items-center space-y-4 p-4">
+        <div className="sm:hidden bg-white w-full flex flex-col items-center space-y-4 p-4">
           <ul className="space-y-4">
             {links.map((link) => (
               <li key={link.name}>
-                <a href={link.href} className="text-sm sm:text-base">
+                <a href={link.href} className="text-sm sm:text-base text-black">
                   {link.name}
                 </a>
               </li>
@@ -102,7 +105,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="bg-[#a8cec6] min-h-[732px] w-full flex flex-col items-center py-8">
+      <div className="bg-black min-h-[732px] w-full flex flex-col items-center py-8">
         <p className="text-white text-lg sm:text-xl pb-8 text-center px-4 oi-font">
           The Grim reaper of Zeroes
         </p>
@@ -112,7 +115,7 @@ export default function Home() {
           }`}
         >
           <Image
-            src="/img/im.png"
+            src="/img/$KILLOlogo.png"
             alt="KILLO the Grim Reaper"
             width={500}
             height={500}
@@ -121,27 +124,26 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#f5b041] py-8 text-center px-4" id="About">
-        <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font">
-          {" "}
+      <div className="bg-[#ff3131] py-8 text-center px-4" id="About">
+        <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font text-white">
           No Taxes | Total Supply 144 Billion | Crowdfunded Launch
         </p>
       </div>
 
       <div
-        className="flex flex-col sm:flex-row w-full bg-slate-200 py-8"
+        className="flex flex-col sm:flex-row w-full bg-white py-8"
         id="Tokenomics"
       >
         <div className="sm:w-1/2 flex flex-col justify-center items-center text-center px-4 mt-8 sm:mt-0">
-          <p className="bg-gradient-to-r from-amber-700 via-brown-500 to-yellow-900 bg-clip-text text-transparent text-xl sm:text-3xl font-black">
+          <p className="text-[#ff3131] text-xl sm:text-3xl font-black">
             Legend tells of an ancient prophecy. When the markets crash,
-            <span className="font-semibold text-slate-700">
+            <span className="font-semibold text-black">
               when bulls turn to bears, and FOMO fades to FUD,
             </span>
             a spectral figure emerges from the shadows. The Grim Reaper arises
             with his scythe.
           </p>
-          <p className="font-semibold text-slate-700 mt-4 text-xl sm:text-3xl">
+          <p className="font-semibold text-black mt-4 text-xl sm:text-3xl">
             With Every swing cutting away FUDs and Zeroes maintaining the
             balance.
           </p>
@@ -152,18 +154,18 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full bg-slate-200 py-8" id="hc">
+      <div className="w-full bg-white py-8" id="hc">
         <KILLOInfo />
       </div>
 
-      <div className="bg-slate-800 text-white w-full py-8">
+      <div className="bg-black text-white w-full py-8">
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 mx-4">
           <Link href="/" className="flex flex-row items-center">
-            <h1 className="text-2xl sm:text-4xl font-semibold text-[#f5b041] oi-font">
+            <h1 className="text-2xl sm:text-4xl font-semibold text-[#ff3131] oi-font">
               KILLO
             </h1>
             <Image
-              src="/img/im.png"
+              src="/img/$KILLOlogo.png"
               alt="h"
               width={50}
               height={50}
@@ -171,12 +173,12 @@ export default function Home() {
             />
           </Link>
           <div
-            className="text-center text-[#d1a359] sm:text-left sm:ml-8 mx-1 oi-font "
+            className="text-center text-[#ff3131] sm:text-left sm:ml-8 mx-1 oi-font "
             id="cu"
           >
             <Link href="mailto:contact@killo.xyz">contact@killo.xyz</Link>
           </div>
-          <div className="text-center text-slate-700 sm:text-left sm:ml-8 mx-2 oi-font ">
+          <div className="text-center text-[ #0A0A0A] sm:text-left sm:ml-8 mx-2 oi-font ">
             <h1 className="text-lg font-semibold m-2 ">DISCLAIMER</h1>
             <p className="text-sm sm:text-base mt-2">
               $KILLO is a fan made speculative digital asset with no intrinsic

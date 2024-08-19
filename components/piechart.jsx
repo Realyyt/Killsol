@@ -1,12 +1,12 @@
 import React from "react";
 
 const data = [
-  { name: "Presale", value: 20, color: "#a8cec6" },
-  { name: "Liquidity", value: 30, color: "#f5b041" },
-  { name: "CEX, launchpads, MM", value: 20, color: "#d35400" },
-  { name: "Initial Backers", value: 10, color: "#8e44ad" },
-  { name: "Marketing", value: 15, color: "#16a085" },
-  { name: "Community Rewards", value: 5, color: "#f39c12" },
+  { name: "Presale", value: 20, color: "#ff3131" },
+  { name: "Liquidity", value: 30, color: "white" },
+  { name: "CEX, launchpads, MM", value: 20, color: "black" },
+  { name: "Initial Backers", value: 10, color: "#ff3131" },
+  { name: "Marketing", value: 15, color: "white" },
+  { name: "Community Rewards", value: 5, color: "black" },
 ];
 
 const KillonomicsPieChart = () => {
@@ -23,7 +23,7 @@ const KillonomicsPieChart = () => {
           }
         `}
       </style>
-      <h2 className="text-2xl font-bold text-center mb-4 oi-font">
+      <h2 className="text-2xl font-bold text-center mb-4 oi-font text-[#ff3131]">
         Killonomics
       </h2>
       <svg viewBox="0 0 100 100" className="w-full h-auto">
@@ -40,18 +40,26 @@ const KillonomicsPieChart = () => {
 
           startAngle += angle;
 
-          return <path key={index} d={path} fill={item.color} />;
+          return (
+            <path
+              key={index}
+              d={path}
+              fill={item.color}
+              stroke="black"
+              strokeWidth="0.5"
+            />
+          );
         })}
       </svg>
       <div className="mt-4 space-y-2">
         {data.map((item, index) => (
           <div key={index} className="flex items-center">
             <div
-              className="w-4 h-4 mr-2"
+              className="w-4 h-4 mr-2 border border-black"
               style={{ backgroundColor: item.color }}
             ></div>
-            <span className="flex-grow">{item.name}</span>
-            <span className="font-semibold">{item.value}%</span>
+            <span className="flex-grow text-black">{item.name}</span>
+            <span className="font-semibold text-black">{item.value}%</span>
           </div>
         ))}
       </div>
