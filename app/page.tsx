@@ -134,10 +134,10 @@ export default function Home() {
         </section>
 
         <section
-          className="flex flex-col sm:flex-row w-full bg-[#FF0000] py-8"
+          className="flex flex-col w-full bg-[#FF0000] py-8"
           id="Tokenomics"
         >
-          <div className="sm:w-1/2 flex flex-col justify-center items-center text-center px-4 mt-8 sm:mt-0">
+          <div className="flex flex-col justify-center items-center text-center px-4 mt-8 sm:mt-0">
             <p className="text-black text-xl sm:text-3xl font-black">
               Legend tells of an ancient prophecy. When the markets crash,
               <span className="font-semibold">
@@ -152,7 +152,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="sm:w-1/2 flex justify-center">
+          <div className="flex justify-center mt-8">
             <KillonomicsPieChart />
           </div>
         </section>

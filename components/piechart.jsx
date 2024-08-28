@@ -1,20 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
-const data = [
-  { name: "Presale", value: 20, color: "#ff3131" },
-  { name: "Liquidity", value: 30, color: "white" },
-  { name: "CEX, launchpads, MM", value: 20, color: "black" },
-  { name: "Initial Backers", value: 10, color: "#ff3131" },
-  { name: "Marketing", value: 15, color: "white" },
-  { name: "Community Rewards", value: 5, color: "black" },
+const photos = [
+  "/img/1.jpg",
+  "/img/2.jpg",
+  "/img/3.jpg",
+  "/img/4.jpg",
+  "/img/5.jpg",
+  "/img/6.jpg",
+  "/img/7.jpg",
+  "/img/8.jpg",
+  "/img/9.jpg",
+  "/img/88.jpg",
+  "/img/999.jpg",
+  "/img/99.jpg",
 ];
 
-const KillonomicsPieChart = () => {
-  const total = data.reduce((sum, item) => sum + item.value, 0);
-  let startAngle = 0;
+const reaperTexts = [
+  "Your time is up!",
+  "Death comes for all",
+  "Embrace the void",
+  "The reaper awaits",
+  "Your soul is mine",
+  "No escape from fate",
+  "The scythe swings",
+  "Darkness falls",
+  "The end is near",
+  "Join the afterlife",
+  "Reap what you sow",
+  "Death's cold embrace",
+];
+
+const KilloGallery = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="w-full max-w-md mx-auto p-4">
+    <div className="w-full max-w-6xl mx-auto p-4">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Oi&display=swap');
@@ -23,48 +45,50 @@ const KillonomicsPieChart = () => {
           }
         `}
       </style>
-      <h2 className="text-2xl font-bold text-center mb-4 oi-font text-[#990000]">
-        Killonomics
-      </h2>
-      <svg viewBox="0 0 100 100" className="w-full h-auto">
-        {data.map((item, index) => {
-          const angle = (item.value / total) * 360;
-          const endAngle = startAngle + angle;
-          const largeArcFlag = angle > 180 ? 1 : 0;
-          const startX = 50 + 50 * Math.cos((Math.PI * startAngle) / 180);
-          const startY = 50 + 50 * Math.sin((Math.PI * startAngle) / 180);
-          const endX = 50 + 50 * Math.cos((Math.PI * endAngle) / 180);
-          const endY = 50 + 50 * Math.sin((Math.PI * endAngle) / 180);
-
-          const path = `M 50 50 L ${startX} ${startY} A 50 50 0 ${largeArcFlag} 1 ${endX} ${endY} Z`;
-
-          startAngle += angle;
-
-          return (
-            <path
-              key={index}
-              d={path}
-              fill={item.color}
-              stroke="black"
-              strokeWidth="0.5"
+      <motion.h2
+        className="text-4xl font-bold text-center mb-8 oi-font text-[#990000]"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        KILLO Gallery
+      </motion.h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {photos.map((photo, index) => (
+          <motion.div
+            key={index}
+            className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={() => setHoveredIndex(index)}
+            onHoverEnd={() => setHoveredIndex(null)}
+          >
+            <Image
+              src={photo}
+              alt={`KILLO photo ${index + 1}`}
+              layout="fill"
+              objectFit="cover"
+              className="transition-transform duration-300"
             />
-          );
-        })}
-      </svg>
-      <div className="mt-4 space-y-2">
-        {data.map((item, index) => (
-          <div key={index} className="flex items-center">
-            <div
-              className="w-4 h-4 mr-2 border border-black"
-              style={{ backgroundColor: item.color }}
-            ></div>
-            <span className="flex-grow text-black">{item.name}</span>
-            <span className="font-semibold text-black">{item.value}%</span>
-          </div>
+            {hoveredIndex === index && (
+              <motion.div
+                className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <p className="text-white text-lg font-bold text-center px-4">
+                  {reaperTexts[index]}
+                </p>
+              </motion.div>
+            )}
+          </motion.div>
         ))}
       </div>
     </div>
   );
 };
 
-export default KillonomicsPieChart;
+export default KilloGallery;
