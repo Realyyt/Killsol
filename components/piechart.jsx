@@ -23,7 +23,7 @@ const KillonomicsPieChart = () => {
           }
         `}
       </style>
-      <h2 className="text-2xl font-bold text-center mb-4 oi-font text-[#ff3131]">
+      <h2 className="text-2xl font-bold text-center mb-4 oi-font text-[#990000]">
         Killonomics
       </h2>
       <svg viewBox="0 0 100 100" className="w-full h-auto">
