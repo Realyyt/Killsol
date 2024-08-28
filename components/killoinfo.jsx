@@ -16,10 +16,10 @@ const SlideBox = ({ title, content }) => {
       </button>
       <div
         className={`bg-[#FF0000] text-black transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 p-4" : "max-h-0"
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >
-        {content}
+        <div className="p-4">{content}</div>
       </div>
     </div>
   );
@@ -84,14 +84,11 @@ const KILLOInfo = () => {
             <SlideBox key={index} title={step.title} content={step.content} />
           ))}
         </div>
-        <p className="text-lg font-bold mb-6 text-center text-black oi-font">
+        <p className="text-lg font-bold mb-4 text-center text-black oi-font">
           Finished Already? You&#39;ve Earned Your Rest! That&#39;s right,
           you&#39;ve successfully summoned the Grim Reaper.
         </p>
-        <div className="flex justify-center mb-6">
-          <ContinuousVideo videoName="killo.mp4" width={400} height={320} />
-        </div>
-        <h3 className="text-2xl font-bold mb-4 text-center text-black">
+        <h3 className="text-2xl font-bold mb-4 text-center text-black oi-font">
           FAQs:
         </h3>
         <p className="mb-4 italic text-center text-black oi-font">
@@ -103,12 +100,12 @@ const KILLOInfo = () => {
           ))}
         </div>
 
-        <h3 className="text-2xl font-bold text-center text-black oi-font">
+        <h3 className="text-2xl font-bold mt-6 text-center text-black oi-font">
           Community:
         </h3>
         <p className="text-center text-black oi-font" id="c">
           Join our gang of zero-haters.
-          <span className="flex justify-center">
+          <span className="flex justify-center mt-2">
             <Link href="https://x.com/Killosol">
               <Image src="/img/x.png" alt="x" width={20} height={20} />
             </Link>
