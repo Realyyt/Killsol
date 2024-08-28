@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const links = [
   { name: "About", href: "#About" },
-  { name: "Killonomics", href: "#Tokenomics" },
+  { name: "Killo Gallery", href: "#Tokenomics" },
   { name: "How to Buy", href: "#hc" },
   { name: "FAQ", href: "#hc" },
   { name: "Community", href: "#c" },
