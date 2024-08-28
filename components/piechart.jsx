@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -34,9 +34,21 @@ const reaperTexts = [
 
 const KilloGallery = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleInteraction = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+    if (!isMobile) {
+      setActiveIndex(index === activeIndex ? null : index);
+    }
   };
 
   return (
@@ -77,7 +89,7 @@ const KilloGallery = () => {
               objectFit="cover"
               className="transition-transform duration-300"
             />
-            {activeIndex === index && (
+            {(activeIndex === index || isMobile) && (
               <motion.div
                 className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
                 initial={{ opacity: 0 }}
