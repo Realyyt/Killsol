@@ -33,7 +33,11 @@ const reaperTexts = [
 ];
 
 const KilloGallery = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleInteraction = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
     <div className="w-full max-w-6xl mx-auto p-4">
@@ -57,13 +61,14 @@ const KilloGallery = () => {
         {photos.map((photo, index) => (
           <motion.div
             key={index}
-            className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="relative aspect-square overflow-hidden rounded-lg shadow-lg transition-shadow duration-300"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ scale: 1.05 }}
-            onHoverStart={() => setHoveredIndex(index)}
-            onHoverEnd={() => setHoveredIndex(null)}
+            onHoverStart={() => handleInteraction(index)}
+            onHoverEnd={() => handleInteraction(null)}
+            onClick={() => handleInteraction(index)}
           >
             <Image
               src={photo}
@@ -72,7 +77,7 @@ const KilloGallery = () => {
               objectFit="cover"
               className="transition-transform duration-300"
             />
-            {hoveredIndex === index && (
+            {activeIndex === index && (
               <motion.div
                 className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center"
                 initial={{ opacity: 0 }}
