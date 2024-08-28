@@ -11,18 +11,13 @@ const photos = [
   "/img/6.jpg",
 ];
 
-const bullishTexts = [
-  "KILLO to the moon!",
-  "HODL KILLO forever!",
-  "KILLO's bullish AF!",
-  "Diamond hands, KILLO style!",
-  "Pump KILLO to the stars!",
-  "FOMO into KILLO now!",
-  "Green candles for KILLO!",
-  "Wen KILLO moon?",
-  "KILLO rocket emojis!",
-  "KILLO apes together strong!",
-  "KILLO's gonna make it!",
+const reapingRhymes = [
+  "Scythe swings, portfolio sings! 📈🚀",
+  "KILLO's here, zeroes beware! 🔥💀",
+  "FUD slayer, gains player! 💪💰",
+  "KILLO reaps, wallet leaps! 🌙🤑",
+  "Bear market? KILLO slaughters it! 🐻☠️",
+  "HODL tight, KILLO's might! 💎🙌"
 ];
 
 const KilloGallery = () => {
@@ -58,9 +53,9 @@ const KilloGallery = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        KILLO Gallery
+        KILLO's Reaping Gallery
       </motion.h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {photos.map((photo, index) => (
           <motion.div
             key={index}
@@ -73,7 +68,7 @@ const KilloGallery = () => {
           >
             <Image
               src={photo}
-              alt={`KILLO photo ${index + 1}`}
+              alt={`KILLO reaping ${index + 1}`}
               layout="fill"
               objectFit="cover"
               className="transition-transform duration-300 hover:scale-110"
@@ -85,8 +80,8 @@ const KilloGallery = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-white text-sm md:text-base font-bold text-center px-4">
-                  {bullishTexts[index]}
+                <p className="text-white text-sm md:text-base font-bold text-center px-4 whitespace-pre-line">
+                  {reapingRhymes[index]}
                 </p>
               </motion.div>
             )}

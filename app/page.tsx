@@ -127,7 +127,7 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <section className="bg-[#FF0000] py-8 text-center px-4" id="About">
+        <section className="bg-[#FF0000] text-center px-4" id="About">
           <p className="font-normal hover:font-bold text-lg sm:text-xl oi-font text-black">
             No Taxes | Total Supply 144 Billion | Crowdfunded Launch
           </p>
