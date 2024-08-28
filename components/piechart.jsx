@@ -53,7 +53,7 @@ const KilloGallery = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        KILLO's Reaping Gallery
+        KILLO&apos;s Reaping Gallery
       </motion.h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {photos.map((photo, index) => (
