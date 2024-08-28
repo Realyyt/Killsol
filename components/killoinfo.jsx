@@ -16,7 +16,7 @@ const SlideBox = ({ title, content }) => {
       </button>
       <div
         className={`bg-[#FF0000] text-black transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-96" : "max-h-0"
         } overflow-hidden`}
       >
         <div className="p-4">{content}</div>
