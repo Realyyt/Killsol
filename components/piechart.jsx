@@ -13,11 +13,11 @@ const photos = [
 
 const reapingRhymes = [
   "Scythe swings, portfolio sings! 📈🚀",
-  "KILLO&apos;s here, zeroes beware! 🔥💀",
+  "KILLOs here, zeroes beware! 🔥💀",
   "FUD slayer, gains player! 💪💰",
   "KILLO reaps, wallet leaps! 🌙🤑",
   "Bear market? KILLO slaughters it! 🐻☠️",
-  "HODL tight, KILLO&apos;s might! 💎🙌"
+  "HODL tight, KILLOs might! 💎🙌"
 ];
 
 const KilloGallery = () => {
