@@ -53,10 +53,6 @@ const KILLOInfo = () => {
       content: "Refer How to buy section",
     },
     {
-      title: "When will KILLO launch?",
-      content: "15th August 2024",
-    },
-    {
       title: "Which exchanges KILLO will be listed on?",
       content: "KILLO will be listed on all major exchanges over time",
     },
